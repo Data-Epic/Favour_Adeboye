@@ -26,6 +26,8 @@ Just as someone reading the recipe might appreciate additional information on te
 
 While you are preparing jollof rice in your kitchen you have a set of labeled jars. In Python, your computer's memory is like a kitchen counter with many jars. Each jar represents a memory location, a place where you can store something. The labels on these jars are like variable names in Python. Each variable is a label that you can attach to a jar to easily identify what's stored inside. A variable is a container for storing data values, it is created the moment you assign a data value to it.
 
+Now, let's say you need to store sugar, flour, and salt. You would have jars labeled "sugar," "flour," and "salt." Similarly, in Python, you create variables like sugar, flour, and salt to store different types of data.
+
     x = 4    # x and y are variables and '=' is the assigner
     y = 'John'
     print (x)
@@ -33,4 +35,5 @@ While you are preparing jollof rice in your kitchen you have a set of labeled ja
 
 3. **Python Data-types**:
 
-Now, let's say you need to store sugar, flour, and salt. You would have jars labeled "sugar," "flour," and "salt." Similarly, in Python, you create variables like sugar, flour, and salt to store different types of data.
+The ingredients in your kitchen have different properties and uses. Similarly, in Python, there are different data types, each with its characteristics and purposes.
+Just as you wouldn't store liquid ingredients in a solid container, each data type in Python has specific use cases. Strings are for text, integers are for whole numbers, floats are for decimal numbers, and booleans are for True or False values.
