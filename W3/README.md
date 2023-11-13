@@ -5,7 +5,7 @@ Getting started with Python for Data analysis can be quite daunting from the reg
 
 Here are some fundamental concepts you need to grasp to fully ground you in your journey to becoming a great analyst using Python for analysis:
 
-  1. **Python Comment:**
+  ### 1. **Python Comment:**
 
 Imagine you're writing a recipe to cook Jollof rice in a cookbook. you write down a series of steps to follow to prepare the dish, you also include notes within the recipe to give additional information or clarification about the instructions written. These notes help anyone reading the cookbook to understand the steps in the recipe and how it works to help them prepare the dish.
 
@@ -22,7 +22,7 @@ If you write a note next to a specific step in your recipe, it could explain why
 
 Just as someone reading the recipe might appreciate additional information on techniques or ingredient substitutions, someone reading your code (including your future self) will benefit from well-written comments that explain the reasoning behind the code.
 
-  2. **Python Variables**
+  ### 2. **Python Variables**
 
 While you are preparing jollof rice in your kitchen you have a set of labeled jars. In Python, your computer's memory is like a kitchen counter with many jars. Each jar represents a memory location, a place where you can store something. The labels on these jars are like variable names in Python. Each variable is a label that you can attach to a jar to easily identify what's stored inside. A variable is a container for storing data values, it is created the moment you assign a data value to it.
 
@@ -33,7 +33,7 @@ Now, let's say you need to store sugar, flour, and salt. You would have jars lab
     print (x)
     print (y)
 
-3. **Python Data-types**:
+### 3. **Python Data-types**:
 
 The ingredients in your kitchen have different properties and uses. Similarly, in Python, there are different data types, each with its characteristics and purposes.
 Just as you wouldn't store liquid ingredients in a solid container, each data type in Python has specific use cases. Strings are for text, integers are for whole numbers, floats are for decimal numbers, and booleans are for True or False values.
