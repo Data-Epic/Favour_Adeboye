@@ -36,4 +36,4 @@ Now, let's say you need to store sugar, flour, and salt. You would have jars lab
 ### 3. **Python Data-types**:
 
 The ingredients in your kitchen have different properties and uses. Similarly, in Python, there are different data types, each with its characteristics and purposes.
-Just as you wouldn't store liquid ingredients in a solid container, each data type in Python has specific use cases. Strings are for text, integers are for whole numbers, floats are for decimal numbers, and booleans are for True or False values.
+Just as you wouldn't store liquid ingredients in a solid container, each data type in Python has specific use cases. Strings are for text, integers are for whole numbers, floats are for decimal numbers, and booleans are for True or False values. The values assigned to variables x and y in the code example above are called data types with 4 being an integer, and 'John' a textual data called a string.
