@@ -1,7 +1,9 @@
 print ('Hello World!')
 
-name = 'Favour Adeboye'
-age = 24
-is_student = True
+name = input ('Enter your name: ')
+age = input ('Enter your age: ')
+is_student = input ('Are you a student? (yes/no): ')
 
-print ('It is', is_student, name, 'is a student and is', age, 'years old')
+is_student_bool = is_student.lower() == 'yes'
+
+print (name, 'is', age, 'years old. Is', name, 'a student?:', is_student_bool)
