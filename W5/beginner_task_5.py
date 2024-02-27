@@ -97,3 +97,6 @@ print(thisdictionary)
 
 # Question 1g:
 
+thestring = ("123")
+x = int(thestring)
+print(x)
