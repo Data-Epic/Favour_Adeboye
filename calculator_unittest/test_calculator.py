@@ -2,7 +2,7 @@ import unittest
 
 from calculator_app import Calculations
 
-class TestCalculator(unittest.TestCase):
+class TestCalculations(unittest.TestCase):
 
     def test_sum(self):
         sum = sum(3, 5)
