@@ -41,18 +41,17 @@ def main():
             a = get_valid_operand("Enter the first operand: ")
             b = get_valid_operand("Enter the second operand: ")
 
+            calc = Calculations(a, b)
+
             operations = {
-                '1': sum,
-                '2': difference,
-                '3': product,
-                '4': quotient
+                '1': calc.get_sum,
+                '2': calc.get_difference,
+                '3': calc.get_product,
+                '4': calc.get_quotient
             }
 
-            operation_class = operations[choice]
-            operation = operation_class(a, b)
-
             try:
-                result = operation.execute()
+                result = operations[choice]()
                 print(f"The result is: {result}")
             except ValueError as e:
                 print(e)
