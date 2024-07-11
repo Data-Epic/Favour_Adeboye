@@ -17,47 +17,48 @@ class TestCalculations(unittest.TestCase):
         """
         Tests the get_sum method of the Calculations class.
         """
-        self.assertEqual(self.calc.get_sum(), 15)
+        result = self.calc.get_sum()
+        self.assertEqual(result, 15)
 
     def test_get_difference(self):
         """
         Tests the get_difference method of the Calculations class.
         """
-        self.assertEqual(self.calc.get_difference(), 5)
+        result = self.calc.get_difference()
+        self.assertEqual(result, 5)
 
     def test_get_product(self):
         """
         Tests the get_product method of the Calculations class.
         """
-        self.assertEqual(self.calc.get_product(), 50)
+        result = self.calc.get_product()
+        self.assertEqual(result, 50)
 
     def test_get_quotient(self):
         """
         Tests the get_quotient method of the Calculations class.
         """
-        self.assertEqual(self.calc.get_quotient(), 2)
+        result = self.calc.get_quotient()
+        self.assertEqual(result, 2)
 
-    def test_get_quotient_divide_by_zero(self):
-        """
-        Tests the get_quotient method of the Calculations class when a zero value is assigned to the second operand.
-        """
+        # Test division by zero
         calc = Calculations(10, 0)
         with self.assertRaises(ValueError):
             calc.get_quotient()
 
-    def test_get_valid_operand_valid_input(self):
+    def test_get_valid_operand(self):
         """
-        Tests the get_valid_operand function with valid input.
+        Tests the get_valid_operand function with valid and invalid input.
         """
+        # Valid input
         with patch('builtins.input', return_value='10.5'):
-            self.assertEqual(get_valid_operand("Enter a number: "), 10.5)
+            result = get_valid_operand("Enter a number: ")
+            self.assertEqual(result, 10.5)
 
-    def test_get_valid_operand_invalid_input(self):
-        """
-        Tests the get_valid_operand function with invalid input followed by a valid input.
-        """
+        # Invalid input followed by valid input
         with patch('builtins.input', side_effect=['invalid', '10.5']):
-            self.assertEqual(get_valid_operand("Enter a number: "), 10.5)
+            result = get_valid_operand("Enter a number: ")
+            self.assertEqual(result, 10.5)
 
 if __name__ == '__main__':
     unittest.main()
