@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: datawrangler
+Version: 0.1
+Summary: A utility package for data wrangling and manipulation
+Author: Favour Adeboye
+Author-email: favouradeboye123@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+# Datawrangler
+
+**datawrangler** is a utility package for data wrangling and manipulation tasks. 
+
+**datawrangler** includes two submodules
+   1. **cleaning**: performs data cleaning functions such as dropping missing data, filling missing data and removing duplicates
+   2. **manipulation**: performs data manipulating functions such as adding new columns, filtering rows and grouping and aggregating data
+
+## Installation
+
+```bash
+pip install datawrangler
