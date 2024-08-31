@@ -1,0 +1,156 @@
+Metadata-Version: 2.1
+Name: datawrangler
+Version: 0.1
+Summary: A package for robust data wrangling operations using Pandas
+Home-page: https://github.com/Data-Epic/Favour_Adeboye/tree/Datawrangler/Datawrangler
+Author: Favour Adeboye
+Author-email: adeboyefavour654@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: os
+
+# DataWrangler
+
+DataWrangler is a Python package designed to simplify data manipulation, cleaning, and preprocessing tasks. It provides a collection of utility functions for handling missing values, detecting and processing outliers, loading and saving datasets in various formats, and more. This package is ideal for data scientists and analysts who need efficient and reusable tools for data wrangling.
+
+## Features
+
+- **Missing Values Handling**: Detect, impute, and fill missing values using different strategies.
+- **Outlier Detection and Handling**: Identify, remove, cap, or replace outliers using IQR or Z-score methods.
+- **Data Loading and Saving**: Load data from CSV, Excel files and save cleaned data in various formats (CSV, Excel, JSON, SQL).
+- **Data Logging**: Log changes and transformations for traceability.
+- **Data Manipulation**: Add new columns, filter rows, group and aggregate data, create interaction features, and normalize features.
+- **Data Exploration**: Generate descriptive statistics, plot histograms, scatter plots, and check data integrity.
+
+## Installation
+
+To install the DataWrangler package, you can use pip:
+
+```bash
+pip install datawrangler
+```
+
+## Modules and Functions
+
+### 1. Cleaning Module (`cleaning.py`)
+
+- `remove_duplicates(df, subset=None)`: Remove duplicate rows based on a specified subset of columns.
+- `clean_text(data, column, to_lowercase=True, remove_whitespace=True, remove_special_chars=True)`: Cleans text data by applying various operations.
+- `correct_data_formats(data, column, format_func)`: Ensures data consistency by applying a formatting function.
+- `correct_outliers(data, column, lower_bound, upper_bound)`: Corrects outlier values that are outside the specified bounds.
+
+### 2. Data Type Module (`data_type.py`)
+
+- `validate_data_types(df, expected_types)`: Validates the data types of DataFrame columns.
+- `convert_to_numeric(data, columns, errors='coerce')`: Converts specified columns to numeric types.
+- `convert_to_datetime(data, columns, format=None)`: Converts specified columns to datetime.
+- `convert_to_category(data, columns)`: Converts specified columns to categorical types.
+- `detect_data_types(data)`: Detects and returns data types of columns.
+- `change_dtype(data, column, new_type)`: Changes the data type of a specified column.
+
+### 3. Exploration Module (`exploration.py`)
+
+- `describe_data(df)`: Provides descriptive statistics for the DataFrame.
+- `plot_histogram(df, column, bins=10)`: Plots a histogram for a specified column.
+- `plot_scatter(df, col1, col2)`: Plots a scatter plot for two specified columns.
+- `check_data_integrity(data)`: Checks for consistency and integrity of the data.
+- `data_quality_report(data)`: Generates a data quality report summarizing missing values, duplicates, and outliers.
+
+### 4. Manipulation Module (`manipulation.py`)
+
+- `add_new_column(df, column_name, value)`: Add a new column to the DataFrame with a specified value.
+- `filter_rows(df, condition)`: Filter rows in the DataFrame based on a condition.
+- `group_and_aggregate(df, group_by, agg_dict)`: Group the DataFrame by specified columns and apply aggregation functions.
+- `create_interaction_features(data, column_pairs)`: Creates interaction features between specified column pairs.
+- `normalize_features(data, columns)`: Normalizes specified features to a 0-1 range.
+
+### 5. Missing Values Module (`missing_values.py`)
+
+- `identify_missing(data)`: Returns a summary of missing values in the dataset.
+- `impute_missing(data, method='mean', columns=None)`: Imputes missing values using specified method (mean, median, mode, constant).
+- `fill_forward(data, columns=None)`: Fills missing values using forward fill.
+- `fill_backward(data, columns=None)`: Fills missing values using backward fill.
+- `drop_missing_data(df, columns=None)`: Drop rows with missing data in specified columns.
+
+### 6. Outliers Module (`outliners.py`)
+
+- `detect_outliers(data, method='IQR', columns=None)`: Detects outliers using specified method (IQR, Z-score).
+- `remove_outliers(data, method='IQR', columns=None)`: Removes outliers using specified method (IQR, Z-score).
+- `cap_outliers(data, method='IQR', columns=None)`: Caps outliers to a specified limit (e.g., 1.5*IQR).
+- `replace_outliers(data, method='median', columns=None)`: Replaces outliers with median or mean.
+
+### 7. Utils Module (`utils.py`)
+
+- `load_data(file_path, file_type='csv')`: Loads data from a file into a DataFrame.
+- `save_cleaned_data(data, filename, file_format='csv')`: Exports the cleaned and processed dataset to various formats.
+- `log_changes(change_description, log_file='data_wrangling.log')`: Logs data transformations and cleaning steps for traceability.
+
+## Usage Examples
+
+Here are some examples to help you get started with using the `datawrangler` package:
+
+### Loading Data
+
+```python
+from datawrangler.utils import load_data
+
+df = load_data('path/to/data.csv', file_type='csv')
+```
+
+### Handling Missing Values
+
+```python
+from datawrangler.missing_values import identify_missing, impute_missing
+
+missing_summary = identify_missing(df)
+df = impute_missing(df, method='mean')
+```
+
+### Detecting and Removing Outliers
+
+```python
+from datawrangler.outliners import detect_outliers, remove_outliers
+
+outliers = detect_outliers(df, method='IQR')
+df = remove_outliers(df, method='IQR')
+```
+
+### Saving Cleaned Data
+
+```python
+from datawrangler.utils import save_cleaned_data
+
+save_cleaned_data(df, 'cleaned_data.csv', file_format='csv')
+```
+
+### Logging Changes
+
+```python
+from datawrangler.utils import log_changes
+
+log_changes("Removed outliers and filled missing values.")
+```
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+## Contact
+
+For questions or feedback, please contact the project maintainer at [adeboyefavour654@gmail.com].
+
+---
+
+Thank you for using DataWrangler! Your feedback is important to us. Please feel free to share any suggestions or issues you encounter.
+```
