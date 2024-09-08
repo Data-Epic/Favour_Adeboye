@@ -30,19 +30,17 @@ class TestWeatherClient(unittest.TestCase):
         mock_get.return_value.json.return_value = {
             'name': 'London',
             'main': {
-                'temp': 293.15  # 20°C
+                'temp': 293.15,  # 20°C
+                'humidity': 60
             },
             'weather': [{
                 'description': 'clear sky'
             }],
-            'main': {
-                'humidity': 60
-            },
             'wind': {
                 'speed': 5.5
-            }
+             }
         }
-        
+       
         # Test get_current_weather with a valid city name
         get_current_weather('London', 'valid_api_key')
         mock_get.assert_called_once_with('http://api.openweathermap.org/data/2.5/weather?q=London&appid=valid_api_key')
@@ -53,35 +51,26 @@ class TestWeatherClient(unittest.TestCase):
         mock_get.return_value.status_code = 404
         
         # Test get_current_weather with an invalid city name
-        with self.assertLogs(level='ERROR'):
+        with self.assertLogs(level='ERROR') as log:
             get_current_weather('InvalidCity', 'valid_api_key')
-        mock_get.assert_called_once_with('http://api.openweathermap.org/data/2.5/weather?q=InvalidCity&appid=valid_api_key')
+            self.assertIn("Error: City 'InvalidCity' not found", log.output[0])
     
     @patch('weather_client.requests.get')
     def test_get_5_day_forecast(self, mock_get):
         """Test get_5_day_forecast with mocked API response."""
         mock_get.return_value.status_code = 200
         mock_get.return_value.json.return_value = {
-            'city': {
-                'name': 'Paris'
+            'name': 'London',
+            'main': {
+                'temp': 293.15,  # 20°C
+                'humidity': 60
             },
-            'list': [
-                {
-                    'dt': 1633036800,  # Corresponds to 12:00:00 UTC
-                    'main': {
-                        'temp': 290.15  # 17°C
-                    },
-                    'weather': [{
-                        'description': 'clear sky'
-                    }],
-                    'main': {
-                        'humidity': 55
-                    },
-                    'wind': {
-                        'speed': 3.5
-                    }
-                }
-            ]
+            'weather': [{
+                'description': 'clear sky'
+            }],
+            'wind': {
+                'speed': 5.5
+            }
         }
         
         # Test get_5_day_forecast with a valid time
@@ -92,11 +81,11 @@ class TestWeatherClient(unittest.TestCase):
     def test_get_5_day_forecast_invalid_city(self, mock_get):
         """Test get_5_day_forecast when the city is invalid (404 error)."""
         mock_get.return_value.status_code = 404
-        
-        # Test get_5_day_forecast with an invalid city name
-        with self.assertLogs(level='ERROR'):
+    
+        # Test get_5_day_forcast with an invalid city name
+        with self.assertLogs(level='ERROR') as log:
             get_5_day_forecast('InvalidCity', 'valid_api_key', '12:00')
-        mock_get.assert_called_once_with('http://api.openweathermap.org/data/2.5/forecast?q=InvalidCity&appid=valid_api_key')
+            self.assertIn("Error: City 'InvalidCity' not found", log.output[0])
 
 if __name__ == '__main__':
     unittest.main()

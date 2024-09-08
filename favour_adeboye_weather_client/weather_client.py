@@ -1,5 +1,9 @@
 import requests
 from datetime import datetime, timezone
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
 
 # Function to convert temperature from Kelvin to Celsius
 def kelvin_to_celsius(kelvin):
@@ -80,27 +84,27 @@ def get_5_day_forecast(city_name, api_key, selected_time):
         
         # Handle the case where the city is not found (404 error)
         elif response.status_code == 404:
-            print(f"\nError: City '{city_name}' not found. Please check the name and try again.")
+            logging.error(f"Error: City '{city_name}' not found. Please check the name and try again.")
         
         # Handle the case where the API key is invalid (401 error)
         elif response.status_code == 401:
-            print("\nError: Invalid API key. Please check your API key and try again.")
+            logging.error("Error: Invalid API key. Please check your API key and try again.")
         
         # Handle other HTTP errors
         else:
-            print(f"\nError: Unable to fetch data (HTTP {response.status_code}). Please try again later.")
+            logging.error(f"Error: Unable to fetch data (HTTP {response.status_code}). Please try again later.")
     
     # Handle connection errors (e.g., no internet)
     except requests.exceptions.ConnectionError:
-        print("\nError: Network problem. Please check your internet connection and try again.")
+        logging.error("Error: Network problem. Please check your internet connection and try again.")
     
     # Handle request timeout errors
     except requests.exceptions.Timeout:
-        print("\nError: The request timed out. Please try again later.")
+        logging.error("Error: The request timed out. Please try again later.")
     
     # Handle any other request-related errors
     except requests.exceptions.RequestException as e:
-        print(f"\nError: {e}")
+        logging.error(f"Error: {e}")
 
 # Function to fetch current weather data from OpenWeatherMap API
 def get_current_weather(city_name, api_key):
@@ -141,27 +145,27 @@ def get_current_weather(city_name, api_key):
         
         # Handle the case where the city is not found (404 error)
         elif response.status_code == 404:
-            print(f"\nError: City '{city_name}' not found. Please check the name and try again.")
+            logging.error(f"Error: City '{city_name}' not found. Please check the name and try again.")
         
         # Handle the case where the API key is invalid (401 error)
         elif response.status_code == 401:
-            print("\nError: Invalid API key. Please check your API key and try again.")
+            logging.error("Error: Invalid API key. Please check your API key and try again.")
         
         # Handle other HTTP errors
         else:
-            print(f"\nError: Unable to fetch data (HTTP {response.status_code}). Please try again later.")
+            logging.error(f"Error: Unable to fetch data (HTTP {response.status_code}). Please try again later.")
     
     # Handle connection errors (e.g., no internet)
     except requests.exceptions.ConnectionError:
-        print("\nError: Network problem. Please check your internet connection and try again.")
+        logging.error("Error: Network problem. Please check your internet connection and try again.")
     
     # Handle request timeout errors
     except requests.exceptions.Timeout:
-        print("\nError: The request timed out. Please try again later.")
+        logging.error("Error: The request timed out. Please try again later.")
     
     # Handle any other request-related errors
     except requests.exceptions.RequestException as e:
-        print(f"\nError: {e}")
+        logging.error(f"Error: {e}")
 
 # Main program logic
 if __name__ == "__main__":
