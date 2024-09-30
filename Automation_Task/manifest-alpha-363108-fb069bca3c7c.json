@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "manifest-alpha-363108",
+  "private_key_id": "fb069bca3c7c5ebb63918b5c1da17e8d556da26d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDJ58kMXe6g0ibQ\nDS+W0HpzYQS1vOYatxt/8KCaX9HeqY/YFGlA9OmRC/zc7Hxyxp0IK4lM1s3k0jAW\n+W1dEswPOB5ADQKhj/Co0gexfWkqr/fnj5a30y2qGAOZnWy3sO7cVdMURnR1sRlg\nqIuVZgdy6XYFJZlqoqKlSU3PRP/vu7FMEfm2vtQbzA9ZFko0U6PobH1NsM+DRZ0h\n2RJmHeHL15cD5tbF2orkm6kxGGN6zLLIYdRTQtHcZ6hinrV/GYj5FrXsLwc8Z12E\nKx+2hw5Md6kXLgEMBmDhC7qGBdJkk30fQ16wsx/e3i35TI7BcyXt7/Hlm7UdHMnO\nw0qN3IfXAgMBAAECggEAPECg1UF01GZScdT1hi6p1CO4OZnpG0DYgoonC1qb8TQt\nuoCA1oMf7oqix7UFAGV3+Dexzg3uPKJi+oAt3FAfOE15bYjUZ61iVqby58sypqwD\nsYU+p5XsMy3eaSm7B2hUJ8mu54aM+5BBsAAsQ4XCpE66Sxfo3BMzsVqaT0fajsou\nHbl6OEcWMZg8hrKS/Gi90ZARW7hi1qf42DwIKw0UWwRsgGL1kE/kbRpL2wEJKONP\nM7iOu+6LQ5RZv3ivtt6EizgTG/bgd8o8Oz8KQMVRkKHn7/7gIUhImXTf2/LmZxW5\nJza18AowKkNYCwHLDMU2eMfNAnoJ5vuounS0iBisMQKBgQD/8eJ6l3kZ0Ndbheu6\nc7n7jEp9CcqqbWW+koKX2Qa0FW2W7eVt7MbXTldF2ppAEFdltJVC6Fl0cr8ke5pY\n6K6MVaCR4yUEwCYJqIVUpwStvC3Xdrj4UunuX4CwENEJU9TrRhS7YEGLf9U2uZRh\nwpeXTwuYSsPrR6/1ye2uxZLWMQKBgQDJ8uufAvtR+QkU1TNL47XKcPW5+hBZ/jsI\nLPU7Em5eojnqWLr0lR9yQb6gOg6WKQzCf0z27yimjJ59qTce6JrCLwwpupEsg5Al\nd/rUcRdkNbBjWsv15EFu+1Xx/TeHlbhXrdFucSjU1pNkFZsTqpOnGSvp5P6y6C6E\n1p2p6J3UhwKBgF8bYh5N5SlLqosO866gTE8GLbPTDKVR64nqZW7Jra0DfWqlUikL\n4EOnj9ScS89cgy1+8iwfrQYRkaeb6pn5NMtfEkDD2ECwqjHSlmEDg0CP+bTkIA3e\nuaDjii1iwlql9SvMKe4K8bBFu1QPl+zP44bNT7Cyr6ThSaia9aCJOGwxAoGAFaDx\nwU8FcasVYOjQnKEfuDXO64MvuyOyWNbP0OrRbUs8nq+wHj/WZVtLOkfdhhGRb0dJ\nC+1jUisfUmAMKkBJSuDVEacMo1LX3ltyPsx5796cLJft3kD7DRLYCpnPF7NeUe2o\nz4ZJFDqDAKYbvMh5Fd1pSZyf9rNNQCboLele9gMCgYEA+QU3Nm1Ca7gfCmqydfnh\nGwv5LSUP1CA+95rCyMEaQhXveNlaDPrIY7J+FLE8jJOi+8Q06hmsqviZ6hpqB257\nS1HNyZnRnCSPbsJuXDnYukmIvAXkjj5JvnzxhXVRHyZ8KuEmnNwFKjs5PAvdFBjK\np5GksEU7wRrrsWitFhkRo1s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dataepic@manifest-alpha-363108.iam.gserviceaccount.com",
+  "client_id": "102131933668975284794",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dataepic%40manifest-alpha-363108.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
